@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Button, Form, FormItem, Checkbox, Input, Card } from 'element-ui'
+import ElementUi from 'element-ui'
 import locale from 'element-ui/lib/locale/lang/ru-RU'
 // import metrika from 'KitPlugins/vue-yandex-metrika'
 import Styles from 'Styles/index.scss'
@@ -11,12 +11,7 @@ import App from './layout/Index.vue'
 // common
 // Vue.use(KitComponents)
 Vue.use(Styles)
-Vue.use(Button)
-Vue.use(Checkbox)
-Vue.use(Input)
-Vue.use(Card)
-Vue.use(Form)
-Vue.use(FormItem)
+Vue.use(ElementUi, { locale, size: 'small' })
 Vue.use(KitPlugins)
 
 Vue.prototype.$ELEMENT = { locale, size: 'medium' }

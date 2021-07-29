@@ -1,24 +1,17 @@
 const KitVueConfigs = require('./node_modules/element-ui-kit/vue.configs')
 
 module.exports = {
-	transpileDependencies: [
-		'element-ui-kit',
-	],
+	...KitVueConfigs.vueConfig,
 	configureWebpack: {
+		...KitVueConfigs.vueConfig.configureWebpack,
 		resolve: {
 			alias: {
+				'element-ui/lib/locale/lang/zh-CN': 'element-ui/lib/locale/lang/ru-RU',
 				ScssVariables: '@/assets/styles/variables.scss',
 				...KitVueConfigs.getAliases({
 					dirname: __dirname,
-					// useLocalKit: true,
-					// localKitPath: 'D:/coding-cats/repos/element-ui-kit',
 				}),
 			},
 		},
-		devServer: KitVueConfigs.configureWebpack.devServer,
 	},
-	pluginOptions: KitVueConfigs.pluginOptions,
-	/* chainWebpack: config => {
-		KitVueConfigs.rawLoader(config)
-	}, */
 }

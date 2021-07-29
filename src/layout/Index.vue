@@ -203,7 +203,7 @@ body {
 }
 
 hr {
-	border-width: 0px;
+	border-width: 0;
 	height: 2px;
 	background-color: $--color-text-placeholder;
 }
@@ -219,7 +219,7 @@ hr {
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 0px;
+	bottom: 0;
 	top: 0;
 	filter: blur(10px) brightness(1.4);
 	background-image: url('~Images/1-intro.jpg');
